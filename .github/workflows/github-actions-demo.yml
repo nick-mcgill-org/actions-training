@@ -16,12 +16,13 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: echo
       - run: |
           echo "Trigger: ${{ github.event_name }}"
           echo "Repository: ${{ github.repository }}"
           echo "Branch: ${{ github.ref }}"
+          
       - uses: actions/checkout@latest
+      
       - name: List
         run: |
             echo "File list:"
